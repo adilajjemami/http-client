@@ -1,0 +1,27 @@
+{
+    "name": "adilajjemami/http-client",
+    "description": "Http client based on Guzzle libraty",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adil AJJEMAMI",
+            "email": "adilajjemami@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AdilAJJEMAMI\\": "src/",
+            "Tests\\AdilAJJEMAMI\\": "tests/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpro/grumphp": "^0.14.2",
+        "phpunit/phpunit": "^7.3",
+        "sensiolabs/security-checker": "^4.1",
+        "friendsofphp/php-cs-fixer": "^2.13"
+    }
+}
