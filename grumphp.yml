@@ -36,12 +36,6 @@ parameters:
             testsuite: ~
             group: []
             always_execute: true
-        securitychecker:
-            lockfile: ./composer.lock
-            format: ~
-            end_point: ~
-            timeout: ~
-            run_always: false
         testsuites:
           code_quality:
               tasks:
@@ -53,6 +47,5 @@ parameters:
                   - phpparser
                   - phpspec
                   - phpversion
-                  - securitychecker
                   - xmllint
                   - yamllint
