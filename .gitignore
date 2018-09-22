@@ -4,6 +4,7 @@ build
 *.log
 .php_cs.cache
 coverage.xml
+coverage
 
 # IDE
 .project
