@@ -1,1 +1,16 @@
-/vendor/
+tests/reports
+build
+.DS_Store
+*.log
+.php_cs.cache
+
+# IDE
+.project
+.settings
+.buildpath
+*.bak
+atlassian-ide-plugin.xml
+.idea
+
+# Composer
+vendor
