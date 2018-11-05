@@ -184,4 +184,58 @@ class RequestTest extends TestCase
                 ->getHeaders()
         );
     }
+
+    /**
+     * test hasHeader
+     */
+    public function testHasHeader(): void
+    {
+        $this->guzzleRequest
+            ->expects($this->once())
+            ->method('hasHeader')
+            ->with('Content-Type')
+            ->willReturn(true);
+
+        $this->assertSame(
+            true,
+            $this->request
+                ->hasHeader('Content-Type')
+        );
+    }
+
+    /**
+     * test getHeader
+     */
+    public function testGetHeader(): void
+    {
+        $this->guzzleRequest
+            ->expects($this->once())
+            ->method('getHeader')
+            ->with('Content-Type')
+            ->willReturn('application/json');
+
+        $this->assertSame(
+            'application/json',
+            $this->request
+                ->getHeader('Content-Type')
+        );
+    }
+
+    /**
+     * test getHeaderLine
+     */
+    public function testGetHeaderLine(): void
+    {
+        $this->guzzleRequest
+            ->expects($this->once())
+            ->method('getHeaderLine')
+            ->with('Content-Type')
+            ->willReturn('Content-Type: application/json');
+
+        $this->assertSame(
+            'Content-Type: application/json',
+            $this->request
+                ->getHeaderLine('Content-Type')
+        );
+    }
 }

@@ -16,3 +16,6 @@ atlassian-ide-plugin.xml
 
 # Composer
 vendor
+
+# Demo
+demo
